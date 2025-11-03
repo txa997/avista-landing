@@ -1,0 +1,105 @@
+/* 
+    responsive-start
+*/
+.nm-responsive {
+    &-area {
+        margin-left: 28px;
+        margin-right: 28px;
+        background-color: #131313;
+        border-radius: 20px;
+        margin-top: 28px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        padding-bottom: 250px;
+        padding-top: 150px;
+
+        @media #{$md,$xs} {
+            padding-top: 100px;
+            padding-bottom: 0;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 652px;
+            height: 652px;
+            background: #D7F346;
+            opacity: 0.52;
+            filter: blur(160px);
+            top: 50%;
+            left: 13%;
+            transform: translateY(-50%);
+            z-index: -2;
+
+            @media #{$lg,$md,$xs} {
+                width: 352px;
+                height: 352px;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 652px;
+            height: 652px;
+            background: #FBFBFB;
+            opacity: 0.18;
+            filter: blur(160px);
+            top: -300px;
+            right: -300px;
+            z-index: -2;
+        }
+    }
+
+    &-bg-shape {
+        width: 7%;
+        text-align: right;
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+        z-index: -2;
+    }
+
+    &-img {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: -1;
+        width: 79%;
+
+        @media #{$md,$xs} {
+            position: unset;
+            transform: unset;
+            width: 100%;
+        }
+    }
+
+
+    &-sec-title {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: -80px;
+
+        @media #{$xxl,$xl,$lg} {
+            margin-right: 0;
+        }
+        @media #{$md,$xs} {
+            margin-right: 0;
+            margin-bottom: 50px;
+        }
+
+        .sec-disc {
+            margin-top: 25px;
+        }
+
+        .btn-wrap {
+            margin-top: 33px;
+        }
+    }
+    
+    
+}
+/* 
+    responsive-end
+*/

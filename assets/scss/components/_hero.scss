@@ -1,0 +1,308 @@
+
+
+.nm-hero {
+    &-area {
+        padding-top: 320px;
+        padding-bottom: 270px;
+        background: #000;
+
+        @media #{$xxl} {
+            padding-top: 350px;
+        }
+        @media #{$xl} {
+            padding-top: 300px;
+        }        
+        @media #{$lg,$md,$xs} {
+            padding-top: 200px;
+        }
+
+        &::after {
+            content: "";
+            height: 245px;
+            background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 01;
+        }
+    }
+
+    &-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -6;
+        mix-blend-mode: luminosity;
+    }
+
+    &-content {
+        max-width: 705px;
+
+        .hero-title {
+            font-size: 82px;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+
+
+            @media #{$xxl} {
+                font-size: 70px;
+            }
+            @media #{$xl} {
+                font-size: 60px;
+            }
+        
+            @media #{$lg} {
+                font-size: 50px;
+            }
+        
+            @media #{$md} {
+                font-size: 45px;
+            }
+        
+        
+            @media #{$xs} {
+                font-size: 35px;
+            }
+        
+            @media #{$sm} {
+                font-size: 40px;
+            }
+        
+
+            span {
+                color: var(--nm-clr-pr-1);
+                display: block;
+                font-Size: 70px;
+                font-Style: italic;
+                display: block;
+                font-weight: 600;
+
+                @media #{$xxl} {
+                    font-size: 65px;
+                }
+                @media #{$xl} {
+                    font-size: 55px;
+                }
+            
+                @media #{$lg} {
+                    font-size: 45px;
+                }
+            
+                @media #{$md} {
+                    font-size: 40px;
+                }
+            
+            
+                @media #{$xs} {
+                    font-size: 30px;
+                }
+            
+                @media #{$sm} {
+                    font-size: 35px;
+                }
+            }
+
+
+
+        }
+
+
+        .inner-div {
+            margin-top: 36px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-img {
+        width: 40%;
+        position: absolute;
+        right: 23%;
+        bottom: 0;
+        z-index: -1;
+
+        @media #{$md} {
+            right: 0%; 
+        }
+        @media #{$xs} {
+            right: 0%; 
+            width: 60%;
+        }
+    }
+
+    &-marquee {
+        &-posi {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            z-index: -5;
+        }
+        &-wrap {
+            display: flex;
+            margin-right: 50px;
+            gap: 50px;
+        }
+
+        &-item {
+            font-family: var(--nm-font-1);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            font-size: 300px;
+            color: rgb(248 248 248 / 8%);
+            flex: 0 0 auto;
+            line-height: 1;
+        }
+    }
+    
+    &-demo {
+        width: 1060px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        position: absolute;
+        top: -210px;
+        right: -300px;
+        height: 100%;
+        z-index: -4;
+        transform: rotate(-14deg);
+
+  
+
+
+        @media #{$xl} {
+            width: 700px;
+            right: -100px;
+        }
+
+        @media #{$lg} {
+            width: 600px;
+            right: -100px;
+        }
+
+        @media #{$md} {
+            width: 548px;
+        }
+
+        @media #{$xs} {
+            width: 400px;
+        }
+
+
+
+
+
+        &-single {
+            height: 310px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        &-col {
+            &:nth-child(1) {
+                animation: heroDemoSlide 27s linear infinite;
+            }
+            &:nth-child(2) {
+                animation: heroDemoSlide2 27s linear infinite;
+            }
+        }
+    }
+}
+
+.as-hero-3-overly  {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    animation: rotateGradient 7s linear infinite;
+    pointer-events: none;
+
+    .overly-1 {
+        width: 50%;
+        height: 250px;
+        background-image: var(--as-clr-gd-3);
+        background-size: 300% 100%;
+        display: block;
+        filter: blur(41px);
+        transform: rotate(17deg) translate(-100px, 200px);
+
+    }
+    .overly-2 {
+        width: 50%;
+        height: 250px;
+        background-image: var(--as-clr-gd-3);
+        background-size: 300% 100%;
+        display: block;
+        filter: blur(41px);
+        transform: rotate(-7deg) translate(20px, 220px);
+    }
+}
+
+
+
+@keyframes rotateGradient {
+    0% {
+      transform: rotateZ(0deg) scale3d(1, 1, 1) skewX(0deg);
+    }
+    10% {
+      transform: rotateZ(2deg) scale3d(1.03, 0.97, 1) skewX(-2deg);
+    }
+    20% {
+      transform: rotateZ(4deg) scale3d(1.05, 0.94, 1) skewX(-4deg);
+    }
+    30% {
+      transform: rotateZ(3deg) scale3d(1.04, 0.96, 1) skewX(-3deg);
+    }
+    40% {
+      transform: rotateZ(1deg) scale3d(1.02, 0.98, 1) skewX(-1deg);
+    }
+    50% {
+      transform: rotateZ(0deg) scale3d(1, 1, 1) skewX(0deg);
+    }
+    60% {
+      transform: rotateZ(-2deg) scale3d(1.06, 0.95, 1) skewX(3deg);
+    }
+    70% {
+      transform: rotateZ(-3deg) scale3d(1.08, 0.92, 1) skewX(4deg);
+    }
+    80% {
+      transform: rotateZ(-1deg) scale3d(1.04, 0.97, 1) skewX(2deg);
+    }
+    90% {
+      transform: rotateZ(0deg) scale3d(1.02, 0.99, 1) skewX(1deg);
+    }
+    100% {
+      transform: rotateZ(0deg) scale3d(1, 1, 1) skewX(0deg);
+    }
+  }
+  
+  
+
+@keyframes heroDemoSlide {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-60%);
+    }
+}
+
+@keyframes heroDemoSlide2 {
+    0% {
+        transform: translateY(-60%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+

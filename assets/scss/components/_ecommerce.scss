@@ -1,0 +1,97 @@
+/* 
+    ecommerce-start
+*/
+.nm-ecommerce {
+    &-area {
+        padding-top: 200px;
+        padding-bottom: 150px;
+
+        @media #{$lg,$md,$xs} {
+            padding-top: 100px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 550px;
+            height: 145px;
+            background: var(--nm-clr-pr-1);
+            filter: blur(100px);
+            transform: translateY(-50%);
+            top: 68%;
+            right: 11%;
+            z-index: -2;
+        }
+    }
+
+    &-bg {
+        &-shape-1 {
+            width: 20%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -2;
+        }
+
+        &-shape-2 {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20%;
+            text-align: right;
+            z-index: -2;
+        }
+    }
+
+    &-img {
+        width: 54%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: -1;
+
+        @media #{$lg} {
+            top: 74%;
+        }
+        @media #{$md,$xs} {
+            width: 100%;
+            position: unset;
+            transform: unset;
+        }
+    }
+
+    &-content {
+        max-width: 660px;
+
+        .sec-disc {
+            margin-top: 25px;
+            opacity: 80%;
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        margin-top: 27px;
+
+        li {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+
+            i {
+                color: var(--nm-clr-pr-1);
+            }
+        }
+    }
+    
+}
+
+
+
+
+/* 
+    ecommerce-end
+*/

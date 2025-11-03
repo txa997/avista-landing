@@ -1,0 +1,107 @@
+/* 
+	preloader-css-start
+*/
+
+/* 
+	preloader-css-start
+*/
+
+.as-preloader {
+	position: fixed;
+	inset: 0;
+	z-index: 9999999;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+
+
+	&-wrap {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		gap: 50px;
+
+			.loader {
+				color: #000;
+				transition: .5s;
+			}
+
+			.loader_letter {
+				text-transform: uppercase;
+				padding: 0 .2em;
+				font-size: 2em;
+				line-height: 1;
+				position: relative;
+				display: inline-block;
+				animation: bounce 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite alternate;
+			}
+
+
+			
+			.loader_letter:nth-child(1) {
+				animation-delay: 0s;
+			}
+			.loader_letter:nth-child(2) {
+				animation-delay: 0.05s;
+			}
+			.loader_letter:nth-child(3) {
+				animation-delay: 0.1s;
+			}
+			.loader_letter:nth-child(4) {
+				animation-delay: 0.15s;
+			}
+			.loader_letter:nth-child(5) {
+				animation-delay: 0.2s;
+			}
+			.loader_letter:nth-child(6) {
+				animation-delay: 0.25s;
+			}
+			.loader_letter:nth-child(7) {
+				animation-delay: 0.3s;
+			}
+			.loader_letter:nth-child(8) {
+				animation-delay: 0.35s;
+			}
+			.loader_letter:nth-child(9) {
+				animation-delay: 0.4s;
+			}
+			.loader_letter:nth-child(10) {
+				animation-delay: 0.45s;
+			}
+			
+			@keyframes bounce {
+				0% {
+				transform: translateY(0px);
+				}
+				100% {
+				transform: translateY(-1em);
+				}
+			}
+
+	}
+
+
+
+	&.loaded {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+
+		.loader {
+			transform: translateY(-100px);
+		}
+	}
+}
+
+
+
+
+
+/* 
+	preloader-css-end
+*/

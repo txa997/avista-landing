@@ -1,0 +1,197 @@
+/* 
+    features-start
+*/
+.nm-features {
+    &-content {
+        .nm-demo-counter {
+            font-size: 145px;
+
+            @media #{$xl} {
+                font-size: 105px;
+            }
+            @media #{$lg} {
+                font-size: 90px;
+            }
+            @media #{$md} {
+                font-size: 70px;
+            }
+            @media #{$xs} {
+                font-size: 40px;
+            }
+            @media #{$sm} {
+                font-size: 50px;
+            }
+        }
+        .title {
+            max-width: 800px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: -40px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &-wrap {
+        padding: 0 24px;
+        display: grid;
+        gap: 48px;
+        grid-template-columns: 1fr 1fr 1fr;
+
+
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr ;
+            padding: 0 0px;
+        }
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+            padding: 0 0px;
+        }
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr ;
+            padding: 0 0px;
+        }
+
+        &-line {
+            &-1 {
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 33.4%;
+                background: radial-gradient(50% 50% at 50% 50%, var(--nm-clr-pr-1) 58.17%, #000000 100%);
+                opacity: 0.52;
+
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+
+            &-2 {
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 33.4%;
+                background: radial-gradient(50% 50% at 50% 50%, var(--nm-clr-pr-1) 58.17%, #000000 100%);
+                opacity: 0.52;
+
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+
+            &-3 {
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top: 32.7%;
+                left: 0;
+                background: radial-gradient(50% 50% at 50% 50%, var(--nm-clr-pr-1) 58.17%, #000000 100%);
+                opacity: 0.52;
+
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+
+            &-4 {
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                bottom: 32.6%;
+                left: 0;
+                background: radial-gradient(50% 50% at 50% 50%, var(--nm-clr-pr-1) 58.17%, #000000 100%);
+                opacity: 0.52;
+
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+
+    &-item {
+        padding: 40px 40px;
+        background: transparent;
+        box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.32);
+        border-radius: 16px;
+        transition: all .4s var(--nm-cube-1);
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 40px 20px;
+        }
+        
+        .icon {
+            width: 68px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--nm-clr-pr-1);
+            border-radius: 8px;
+            transition: all .4s var(--nm-cube-1);
+
+            svg {
+                * {
+                    fill: #fff;
+                    transition: all .4s var(--nm-cube-1);
+                }
+            }
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            background: #fff;
+            opacity: 20%;
+            margin-top: 40px;
+            transition: all .4s var(--nm-cube-1);
+        }
+
+        .title {
+            font-size: 24px;
+            margin-top: 34px;
+            transition: all .4s var(--nm-cube-1);
+        }
+
+        .disc {
+            opacity: 80%;
+            margin-top: 19px;
+            transition: all .4s var(--nm-cube-1);
+        }
+
+        &:hover {
+            background: var(--nm-clr-pr-1);
+            box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.32);
+            .icon {
+                box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.32);
+                background: #000;
+
+                svg * {
+                    fill: #fff;
+                }
+            }
+            .line {
+                background: #fff;
+            }
+            .title, .disc {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+/* 
+    features-end
+*/
